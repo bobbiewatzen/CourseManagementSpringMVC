@@ -32,4 +32,11 @@
   <context:property-placeholder location="classpath:jdbc.properties"/>
   <context:component-scan base-package="packt.jee.course_management" />
   
+  <interceptors>
+    <interceptor>
+      <mapping path="/**"/>
+      <beans:bean class="packt.jee.course_management.interceptor.LoginInterceptor"/>
+    </interceptor>
+  </interceptors>
+  
 </beans:beans>
