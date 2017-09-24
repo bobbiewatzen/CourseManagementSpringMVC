@@ -16,7 +16,7 @@ public class UserController {
     return "login";
   }
   
-  @RequestMapping (value="/login", method=RequestMethod.POST)
+  @RequestMapping (value="login", method=RequestMethod.POST)
   public String doLogin (@ModelAttribute ("user") UserDTO user, Model model) {
     //Hard-coded validation of user name and password to keep this example simple
     //But validation could be done against database or any other means here
